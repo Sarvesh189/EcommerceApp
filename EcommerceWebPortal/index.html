@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+
+    <link href="Assets/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div ui-view="header" />
+    </header>
+    <nav>
+        <div ui-view="leftsidebar" />
+    </nav>
+    <section>
+        <div ui-view="content" />
+    </section>
+       <footer>
+        <div ui-view="footer" />
+    </footer>
+    <script src="Assets/js/bower_components/jquery/dist/jquery.js"></script>
+    <script src="Assets/js/bower_components/angular/angular.min.js"></script>
+    <script src="Assets/js/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="Assets/js/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="App/app.js"></script>
+    <script src="App/Routes.js"></script>
+</body>
+</html>
