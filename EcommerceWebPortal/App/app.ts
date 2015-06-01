@@ -1,7 +1,5 @@
 ﻿/// <reference path="typings/refs.d.ts" />
 
-
-
 module Ecommerce { 
     'user strict';
 
@@ -32,6 +30,7 @@ module Ecommerce {
             $(document).ready(() => {
                 // console.log("booting " + this.workspaceModule.name);
                 angular.bootstrap(document, [this._ecommerceModule.name]);
+               
             });
         }
 
@@ -45,4 +44,5 @@ module Ecommerce {
         new Routes($stateProvider)]);
 
     _ecommerceApp.start();
+   
 }

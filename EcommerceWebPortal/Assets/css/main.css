@@ -1,5 +1,5 @@
 ﻿header {
-    background-color:black;
+    background-color:navy;
     color:white;
     text-align:center;
     padding:5px;	 
@@ -7,7 +7,7 @@
 nav {
     line-height:30px;
     background-color:#eeeeee;
-    height:700px;
+    height:650px;
     width:400px;
     float:left;
     padding:5px;	      
@@ -18,8 +18,9 @@ section {
     padding:10px;	 	 
 }
 footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;
+    background-color: black;
+    color: white;
+    clear: both;
+    text-align: center;
+    padding: 5px;
+}
