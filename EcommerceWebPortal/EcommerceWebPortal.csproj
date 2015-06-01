@@ -19,6 +19,8 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="App\Components\Computers\computer.html" />
+    <Content Include="App\Components\Electronics\Electronic.html" />
     <Content Include="Assets\css\app.css" />
     <Content Include="App\Components\home\homeView.html" />
     <Content Include="App\Shared\footer\footer.html" />
@@ -133,13 +135,45 @@
     <Content Include="Assets\js\bower_components\jquery\src\var\support.js" />
     <Content Include="Assets\js\bower_components\jquery\src\var\toString.js" />
     <Content Include="Assets\js\bower_components\jquery\src\wrap.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\js\npm.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\js\node_modules\bootstrap\Gruntfile.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\affix.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\alert.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\button.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\carousel.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\collapse.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\dropdown.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\modal.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\popover.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\scrollspy.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\tab.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\tooltip.js" />
+    <Content Include="Assets\js\node_modules\bootstrap\js\transition.js" />
     <Content Include="index.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\app.ts" />
+    <TypeScriptCompile Include="App\Common\baseApiService.ts" />
+    <TypeScriptCompile Include="App\Components\Computers\computerController.ts" />
+    <TypeScriptCompile Include="App\Components\Computers\computerService.ts" />
+    <TypeScriptCompile Include="App\Components\Electronics\ElectronicController.ts" />
+    <TypeScriptCompile Include="App\Components\Electronics\ElectronicService.ts" />
     <TypeScriptCompile Include="App\Components\home\homeController.ts" />
     <TypeScriptCompile Include="App\Components\home\homeService.ts" />
+    <TypeScriptCompile Include="App\Models.ts" />
     <TypeScriptCompile Include="App\Routes.ts" />
     <TypeScriptCompile Include="App\typings\angular-ui-router\angular-ui-router.d.ts" />
     <TypeScriptCompile Include="App\typings\angularjs\angular-animate.d.ts" />
@@ -176,6 +210,90 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Assets\js\node_modules\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\js\node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\js\node_modules\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\js\node_modules\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\js\node_modules\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\js\node_modules\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\js\node_modules\bootstrap\grunt\configBridge.json" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\alerts.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\badges.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\bootstrap.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\button-groups.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\buttons.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\carousel.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\close.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\code.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\component-animations.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\dropdowns.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\forms.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\glyphicons.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\grid.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\input-groups.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\jumbotron.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\labels.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\list-group.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\media.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\forms.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\grid.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\image.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\labels.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\panels.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\resize.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\size.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\modals.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\navbar.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\navs.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\normalize.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\pager.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\pagination.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\panels.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\popovers.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\print.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\progress-bars.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\responsive-embed.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\scaffolding.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\tables.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\theme.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\thumbnails.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\tooltip.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\type.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\utilities.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\variables.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\less\wells.less" />
+    <Content Include="Assets\js\node_modules\bootstrap\LICENSE" />
+    <Content Include="Assets\js\node_modules\bootstrap\package.json" />
+    <Content Include="Assets\js\node_modules\bootstrap\README.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -189,7 +307,11 @@
     <Folder Include="Service\App_Start\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service\MenuController.cs" />
+    <Compile Include="Service\Controllers\ComputersController.cs" />
+    <Compile Include="Service\Controllers\ElectronicsController.cs" />
+    <Compile Include="Service\Controllers\MenuController.cs" />
+    <Compile Include="Service\Models\ComputerItem.cs" />
+    <Compile Include="Service\Models\ElectronicItem.cs" />
     <Compile Include="Service\Startup.cs" />
   </ItemGroup>
   <ItemGroup>

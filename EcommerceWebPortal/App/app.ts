@@ -43,6 +43,27 @@ module Ecommerce {
     _ecommerceApp._ecommerceModule.config(['$stateProvider', ($stateProvider: angular.ui.IStateProvider)=>
         new Routes($stateProvider)]);
 
+    _ecommerceApp._ecommerceModule.factory('BaseApiService', ['$q', '$http',
+        ($q: angular.IQService,$http:angular.IHttpService) =>
+            new Services.BaseApiService($q,$http)]);
+
+
+    _ecommerceApp._ecommerceModule.factory('ElectronicService', ['BaseApiService', '$q',
+        (BaseApiService: Ecommerce.Services.IBaseApiService, $q: angular.IQService) =>
+            new Services.ElectronicService(BaseApiService,$q)]);
+
+    _ecommerceApp._ecommerceModule.controller('ElectronicController', ['ElectronicService','$scope',
+        (ElectronicService: Services.IElectronicService, $scope: angular.IScope) => new Electronic.ElectronicController(ElectronicService, $scope)]);
+
+
+
+    _ecommerceApp._ecommerceModule.factory('ComputerService', ['BaseApiService', '$q',
+        (BaseApiService: Ecommerce.Services.IBaseApiService, $q: angular.IQService) =>
+            new Services.ComputerService(BaseApiService, $q)]);
+
+    _ecommerceApp._ecommerceModule.controller('ComputerController', ['ComputerService', '$scope',
+        (ComputerService: Services.IComputerService, $scope: angular.IScope) => new Computer.ComputerController(ComputerService, $scope)]);
+
     _ecommerceApp.start();
    
 }
