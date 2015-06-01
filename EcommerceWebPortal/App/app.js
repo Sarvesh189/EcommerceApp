@@ -31,6 +31,11 @@ var Ecommerce;
     Ecommerce.EcommerceApp = EcommerceApp;
     var _ecommerceApp = new EcommerceApp("ecommerceApp");
     _ecommerceApp._ecommerceModule.config(['$stateProvider', function ($stateProvider) { return new Ecommerce.Routes($stateProvider); }]);
+    _ecommerceApp._ecommerceModule.factory('BaseApiService', ['$q', '$http', function ($q, $http) { return new Ecommerce.Services.BaseApiService($q, $http); }]);
+    _ecommerceApp._ecommerceModule.factory('ElectronicService', ['BaseApiService', '$q', function (BaseApiService, $q) { return new Ecommerce.Services.ElectronicService(BaseApiService, $q); }]);
+    _ecommerceApp._ecommerceModule.controller('ElectronicController', ['ElectronicService', '$scope', function (ElectronicService, $scope) { return new Ecommerce.Electronic.ElectronicController(ElectronicService, $scope); }]);
+    _ecommerceApp._ecommerceModule.factory('ComputerService', ['BaseApiService', '$q', function (BaseApiService, $q) { return new Ecommerce.Services.ComputerService(BaseApiService, $q); }]);
+    _ecommerceApp._ecommerceModule.controller('ComputerController', ['ComputerService', '$scope', function (ComputerService, $scope) { return new Ecommerce.Computer.ComputerController(ComputerService, $scope); }]);
     _ecommerceApp.start();
 })(Ecommerce || (Ecommerce = {}));
 //# sourceMappingURL=app.js.map
